@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="С помощью нашей анкеты вы сможете определить, какие продукты Cat Energy подходят вашему питомцу, и подобрать оптимальный рацион.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Кэт энерджи. Форма</title>
+</head>
+<body>
+  <header class="page-header">
+    <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
+      <span class="page-header__toggle-line page-header__toggle-line--top"></span>
+      <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
+      <span class="page-header__toggle-line page-header__toggle-line--low"></span>
+    </button>
+    <nav class="page-header__nav">
+      <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/content/mascot-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/content/mascot-tablet.svg" width="61" height="50">
+          <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="34" height="38" alt="Маскот Cat Energy.">
+        </picture>
+        <img class="page-header__wordmarks" src="img/content/wordmarks.svg" width="101" height="18" alt="Логотип Cat Energy.">
+      </a>
+      <ul class="page-header__list">
+        <li class="page-header__item">
+          <a class="page-header__link" href="index.html">Главная</a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link" href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="page-header__item">
+          <a class="page-header__link page-header__link--current" href="#" aria-current="page" tabindex="-1">Подбор программы</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Форма обратной связи интернет-магазина Cat Energy.</h1>
+    <section class="application">
+      <div class="application__heading">
+        <h2 class="application__title">Подбор программы</h2>
+        <p class="application__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
+      <form class="application__form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset class="application__fieldset application__fieldset--half">
+          <legend class="visually-hidden">Персональные данные кота</legend>
+          <ul class="application__list">
+            <li class="application__item">
+              <label class="application__contact">
+                <span class="application__sign">Имя:*</span>
+                <input class="application__area" type="text" name="name" placeholder="Барсик" required>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__contact">
+                <span class="application__sign">Вес (кг):*</span>
+                <input class="application__area" type="text" name="weight" placeholder="7" required>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__contact">
+                <span class="application__sign">Возраст (лет):</span>
+                <input class="application__area" type="text" name="age" placeholder="7">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="application__fieldset application__fieldset--half">
+          <legend class="visually-hidden">Выбор программы питания</legend>
+          <ul class="application__list application__list--radio">
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="radio" name="program" value="slim" checked>
+                <span class="application__mark application__mark--radio"></span>
+                <span class="application__value">Похудение</span>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="radio" name="program" value="pro">
+                <span class="application__mark application__mark--radio"></span>
+                <span class="application__value">Набор массы</span>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="radio" name="program" value="doubt">
+                <span class="application__mark application__mark--radio"></span>
+                <span class="application__value">Не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="application__fieldset">
+          <legend class="application__subtitle">Контактные данные (владельца кота)</legend>
+          <ul class="application__list application__list--owner">
+            <li class="application__item">
+              <label class="application__contact">
+                <span class="application__sign">E-mail:*</span>
+                <input class="application__area application__area--mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__contact">
+                <span class="application__sign">Телефон:*</span>
+                <input class="application__area application__area--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="application__fieldset">
+          <legend class="application__subtitle">Комментарий</legend>
+          <label class="application__contact">
+            <span class="visually-hidden">Опишите особенности поведения вашего кота.</span>
+            <textarea class="application__area application__area--textarea" name="comment" aria-label="Ваш комментарий." placeholder="Расскажите обо всех повадках кота"></textarea>
+          </label>
+        </fieldset>
+        <fieldset class="application__fieldset">
+          <legend class="application__subtitle">Дополнительно</legend>
+          <ul class="application__list application__list--checkbox">
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="sweetener" checked>
+                <span class="application__mark application__mark--checkbox"></span>
+                <span class="application__value">Сахарозаменитель</span>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="water">
+                <span class="application__mark application__mark--checkbox"></span>
+                <span class="application__value">Питьевая вода</span>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="milk">
+                <span class="application__mark application__mark--checkbox"></span>
+                <span class="application__value">Молоко</span>
+              </label>
+            </li>
+            <li class="application__item">
+              <label class="application__control">
+                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="vitamins">
+                <span class="application__mark application__mark--checkbox"></span>
+                <span class="application__value">Витамины</span>
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="application__button-wrapper">
+          <button class="application__submit-button button" type="submit">Отправить заявку</button>
+          <span class="application__stint">* — Обязательные поля</span>
+        </div>
+      </form>
+    </section>
+    <section class="map">
+      <h2 class="visually-hidden">Cat Energy на интерактивной карте.</h2>
+      <div class="map__content">
+        <p class="map__slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="map__address">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></p>
+      </div>
+      <picture>
+        <img class="map__image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта расположения Cat Energy.">
+      </picture>
+      <div class="map__interactive" id="map"></div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <a class="page-footer__logo" href="index.html" aria-label="Переход на главную страницу." aria-current="page">
+      <img class="page-footer__wordmarks" src="img/content/wordmarks.svg" width="128" height="24" alt="Логотип Cat Energy.">
+    </a>
+    <ul class="page-footer__list">
+      <li class="page-footer__item">
+        <a class="page-footer__link page-footer__link--vkontakte" href="https://vk.com/htmlacademy" aria-label="Вконтакте." target="_blank" rel="nofollow noopener"></a>
+      </li>
+      <li class="page-footer__item">
+        <a class="page-footer__link page-footer__link--youtube" href="https://www.youtube.com/user/htmlacademyru" aria-label="Youtube." target="_blank" rel="nofollow noopener"></a>
+      </li>
+      <li class="page-footer__item">
+        <a class="page-footer__link page-footer__link--telegram" href="https://t.me/htmlacademy" aria-label="Телеграм." target="_blank" rel="nofollow noopener"></a>
+      </li>
+    </ul>
+    <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
+      <span class="page-footer__copyright-text">HTML Academy</span>
+      <svg class="page-footer__copyright-icon" width="27" height="34" aria-hidden="true" focusable="false">
+        <use href="img/sprite.svg#htmlacademy"></use>
+      </svg>
+    </a>
+  </footer>
+</body>
+</html>
