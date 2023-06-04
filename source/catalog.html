@@ -6,23 +6,28 @@
   <meta name="description" content="Широкий ассортимент кормов Cat Energy по доступным ценам.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи. Каталог</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header">
-    <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
-      <span class="page-header__toggle-line page-header__toggle-line--top"></span>
-      <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
-      <span class="page-header__toggle-line page-header__toggle-line--low"></span>
-    </button>
-    <nav class="page-header__nav">
+  <header class="page-header no-js">
+    <div class="page-header__nav-wrapper">
       <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/content/mascot-desktop.svg" width="70" height="59">
           <source media="(min-width: 768px)" srcset="img/content/mascot-tablet.svg" width="61" height="50">
           <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="34" height="38" alt="Маскот Cat Energy.">
         </picture>
+      </a>
+      <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
         <img class="page-header__wordmarks" src="img/content/wordmarks.svg" width="101" height="18" alt="Логотип Cat Energy.">
       </a>
+      <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
+        <span class="page-header__toggle-line page-header__toggle-line--top"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--low"></span>
+      </button>
+    </div>
+    <nav class="page-header__nav">
       <ul class="page-header__list">
         <li class="page-header__item">
           <a class="page-header__link" href="index.html">Главная</a>
@@ -48,7 +53,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy PRO 500 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy PRO 500 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -73,7 +78,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy PRO 1000 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy PRO 1000 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -98,7 +103,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy PRO 500 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy PRO 500 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -123,7 +128,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy PRO 1000 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy PRO 1000 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -148,7 +153,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy SLIM 500 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy SLIM 500 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -173,7 +178,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy SLIM 1000 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy SLIM 1000 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -198,7 +203,7 @@
             </picture>
           </a>
           <a class="catalog__title-link" href="#" aria-label="Ссылка на страницу с описанием товара.">
-            <h3 class="catalog__title">Cat Energy SLIM 500 г</h3>
+            <h3 class="catalog__subtitle">Cat Energy SLIM 500 г</h3>
           </a>
           <table class="catalog__table">
             <tr class="catalog__row">
@@ -216,8 +221,8 @@
           </table>
           <a class="catalog__button button" href="#">Заказать</a>
         </li>
-        <li class="catalog__item">
-          <h3 class="catalog__title">Показать еще 100500 товаров</h3>
+        <li class="catalog__item catalog__item--more">
+          <h3 class="catalog__subtitle">Показать еще 100500 товаров</h3>
           <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
           <a class="catalog__link button" href="#">Показать все</a>
         </li>
@@ -225,52 +230,56 @@
     </section>
     <section class="additional">
       <h2 class="additional__title">Дополнительные товары</h2>
-      <ul class="additional__list">
-        <li class="additional__item">
-          <h3 class="additional__title">Сахарозаменитель</h3>
-          <dl class="additional__wrapper">
-            <dt class="additional__term">1 упаковка (100 г)</dt>
-            <dd class="additional__definition">200 &#8381;</dd>
-          </dl>
-          <a class="additional__link button" href="#">Заказать</a>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__title">Питьевая вода</h3>
-          <dl class="additional__wrapper">
-            <dt class="additional__term">5 литров</dt>
-            <dd class="additional__definition">50 &#8381;</dd>
-          </dl>
-          <a class="additional__link button" href="#">Заказать</a>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__title">Молоко</h3>
-          <dl class="additional__wrapper">
-            <dt class="additional__term">1 литр</dt>
-            <dd class="additional__definition">100 &#8381;</dd>
-          </dl>
-          <a class="additional__link button" href="#">Заказать</a>
-        </li>
-        <li class="additional__item">
-          <h3 class="additional__title">Витамины</h3>
-          <dl class="additional__wrapper">
-            <dt class="additional__term">1 упаковка (30 г)</dt>
-            <dd class="additional__definition">300 &#8381;</dd>
-          </dl>
-          <a class="additional__link button" href="#">Заказать</a>
-        </li>
-      </ul>
-      <p class="additional__bonus">Закажите все и получите чехол для кота в подарок!</p>
+      <div class="additional__wrapper">
+        <ul class="additional__list">
+          <li class="additional__item">
+            <h3 class="additional__subitle">Сахарозаменитель</h3>
+            <dl class="additional__points">
+              <dt class="additional__term">1 упаковка (100 г)</dt>
+              <dd class="additional__definition">200 &#8381;</dd>
+            </dl>
+            <a class="additional__link button" href="#">Заказать</a>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__subitle">Питьевая вода</h3>
+            <dl class="additional__points">
+              <dt class="additional__term">5 литров</dt>
+              <dd class="additional__definition">50 &#8381;</dd>
+            </dl>
+            <a class="additional__link button" href="#">Заказать</a>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__subitle">Молоко</h3>
+            <dl class="additional__points">
+              <dt class="additional__term">1 литр</dt>
+              <dd class="additional__definition">100 &#8381;</dd>
+            </dl>
+            <a class="additional__link button" href="#">Заказать</a>
+          </li>
+          <li class="additional__item">
+            <h3 class="additional__subitle">Витамины</h3>
+            <dl class="additional__points">
+              <dt class="additional__term">1 упаковка (30 г)</dt>
+              <dd class="additional__definition">300 &#8381;</dd>
+            </dl>
+            <a class="additional__link button" href="#">Заказать</a>
+          </li>
+        </ul>
+        <p class="additional__bonus">Закажите все и получите чехол для кота в подарок!</p>
+      </div>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Cat Energy на интерактивной карте.</h2>
-      <div class="map__content">
+      <div class="map__content map__content--inner">
         <p class="map__slogan">Приглашаем к сотрудничеству дилеров!</p>
         <p class="map__address">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></p>
       </div>
-      <picture>
-        <img class="map__image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта расположения Cat Energy.">
-      </picture>
-      <div class="map__interactive" id="map"></div>
+      <div class="map__wrapper">
+        <picture>
+          <img class="map__image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта расположения Cat Energy.">
+        </picture>
+        <div class="map__interactive" id="map"></div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
@@ -290,10 +299,13 @@
     </ul>
     <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
       <span class="page-footer__copyright-text">HTML Academy</span>
-      <svg class="page-footer__copyright-icon" width="27" height="34" aria-hidden="true" focusable="false">
+      <svg class="page-footer__copyright-icon" width="28" height="35" aria-hidden="true" focusable="false">
         <use href="img/sprite.svg#htmlacademy"></use>
       </svg>
     </a>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
+  <script src="js/burger-menu.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

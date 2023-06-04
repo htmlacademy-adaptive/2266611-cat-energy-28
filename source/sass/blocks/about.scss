@@ -1,0 +1,59 @@
+.about {
+  padding: 0 20px 49px 20px;
+}
+
+.about__title {
+  margin: 0 0 40px 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.about__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 20px;
+}
+
+.about__item {
+  position: relative;
+
+  min-height: 60px;
+  padding: 2px 0 2px 80px;
+
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 60px;
+    height: 60px;
+
+    background-repeat: no-repeat;
+  }
+
+  &--healthy::before {
+    background-image: url("../img/svg/healthy-icon.svg");
+  }
+
+  &--making::before {
+    background-image: url("../img/svg/making-icon.svg");
+  }
+
+  &--feeding::before {
+    background-image: url("../img/svg/feeding-icon.svg");
+  }
+
+  &--effect::before {
+    background-image: url("../img/svg/effect-icon.svg");
+  }
+}

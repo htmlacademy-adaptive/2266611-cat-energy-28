@@ -1,0 +1,79 @@
+.page-footer {
+  display: grid;
+  padding: 40px 20px;
+
+  background-color: $color-white-smoke;
+
+  gap: 20px;
+}
+
+.page-footer__logo {
+  display: block;
+
+  justify-self: center;
+}
+
+.page-footer__wordmarks {
+  display: block;
+}
+
+.page-footer__list {
+  display: grid;
+  justify-content: center;
+  margin: 0;
+  padding: 20px 0 20px 0;
+
+  list-style: none;
+  column-gap: 23px;
+
+  border-top: 1px solid $color-gainsboro;
+  border-bottom: 1px solid $color-gainsboro;
+
+  grid-template-columns: repeat(3, max-content);
+  row-gap: 10px;
+}
+
+.page-footer__link {
+  display: block;
+  width: 29px;
+  height: 22px;
+  margin: 0;
+
+  background-color: $color-dim-gray;
+
+  mask-repeat: no-repeat;
+
+  &--vkontakte {
+    mask-image: url("../img/svg/vkontakte.svg");
+  }
+
+  &--youtube {
+    mask-image: url("../img/svg/youtube.svg");
+  }
+
+  &--telegram {
+    mask-image: url("../img/svg/telegram.svg");
+  }
+}
+
+.page-footer__copyright {
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 19px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  justify-self: center;
+}
+
+.page-footer__copyright-text {
+  display: block;
+  max-width: 200px;
+  margin-right: 139px;
+}
+
+.page-footer__copyright-icon {
+  flex-shrink: 0;
+}

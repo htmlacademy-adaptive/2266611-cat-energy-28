@@ -1,0 +1,68 @@
+.application {
+  padding: 27px 20px 32px 20px;
+}
+
+.application__fieldset {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  text-transform: uppercase;
+
+  border: 0;
+}
+
+.application__list {
+  display: grid;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  gap: 14px;
+}
+
+.application__title {
+  margin: 0 0 37px 0;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.application__description {
+  max-width: 230px;
+  margin: 0 0 15px 0;
+
+  color: $color-charcoal;
+}
+
+.application__sign {
+  color: $color-nero;
+}
+
+.application__area {
+  width: 100%;
+  padding: 14px 20px 13px 20px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $ff-oswald;
+  text-transform: uppercase;
+
+  border: none;
+  box-shadow: 0 0 0 1px $color-whisper-c inset;
+}
+
+.application__stint {
+  line-height: 16px;
+  font-family: $ff-lato;
+}
+
+.application__submit-button {
+  width: 100%;
+  padding: 10px 20px;
+
+  font-size: 16px;
+  line-height: 20px;
+}

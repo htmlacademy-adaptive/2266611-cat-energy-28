@@ -1,0 +1,72 @@
+.hero {
+  text-align: center;
+  color: $color-white;
+}
+
+.hero__heading {
+  position: relative;
+
+  padding: 27px 20px 29px 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+
+    width: 100%;
+    height: calc(100% + 135px);
+
+    background-image: url("../img/background/hero-cat-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/hero-cat-mobile@2x.jpg");
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 100%;
+    height: calc(100% + 135px);
+
+    background-color: rgba($color-apple, 0.85);
+  }
+}
+
+.hero__title {
+  max-width: 250px;
+  margin: 0 auto 25px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.hero__slogan {
+  max-width: 250px;
+  margin: 0 auto;
+
+  line-height: 14px;
+  text-transform: uppercase;
+}
+
+.hero__image {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto 3px;
+}
+
+.hero__link {
+  max-width: 280px;
+  margin: 0 auto;
+  padding: 11px 20px;
+}

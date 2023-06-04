@@ -6,23 +6,28 @@
   <meta name="description" content="С помощью нашей анкеты вы сможете определить, какие продукты Cat Energy подходят вашему питомцу, и подобрать оптимальный рацион.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи. Форма</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header">
-    <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
-      <span class="page-header__toggle-line page-header__toggle-line--top"></span>
-      <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
-      <span class="page-header__toggle-line page-header__toggle-line--low"></span>
-    </button>
-    <nav class="page-header__nav">
+  <header class="page-header no-js">
+    <div class="page-header__nav-wrapper">
       <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/content/mascot-desktop.svg" width="70" height="59">
           <source media="(min-width: 768px)" srcset="img/content/mascot-tablet.svg" width="61" height="50">
           <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="34" height="38" alt="Маскот Cat Energy.">
         </picture>
+      </a>
+      <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
         <img class="page-header__wordmarks" src="img/content/wordmarks.svg" width="101" height="18" alt="Логотип Cat Energy.">
       </a>
+      <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
+        <span class="page-header__toggle-line page-header__toggle-line--top"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--low"></span>
+      </button>
+    </div>
+    <nav class="page-header__nav">
       <ul class="page-header__list">
         <li class="page-header__item">
           <a class="page-header__link" href="index.html">Главная</a>
@@ -158,14 +163,16 @@
     </section>
     <section class="map">
       <h2 class="visually-hidden">Cat Energy на интерактивной карте.</h2>
-      <div class="map__content">
+      <div class="map__content map__content--inner">
         <p class="map__slogan">Приглашаем к сотрудничеству дилеров!</p>
         <p class="map__address">ул. Большая Конюшенная, д. 19/8 <span class="map__city">Санкт-Петербург</span></p>
       </div>
-      <picture>
-        <img class="map__image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта расположения Cat Energy.">
-      </picture>
-      <div class="map__interactive" id="map"></div>
+      <div class="map__wrapper">
+        <picture>
+          <img class="map__image" src="img/content/map-mobile.jpg" srcset="img/content/map-mobile@2x.jpg 2x" width="320" height="362" alt="Карта расположения Cat Energy.">
+        </picture>
+        <div class="map__interactive" id="map"></div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
@@ -185,10 +192,13 @@
     </ul>
     <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="nofollow noopener">
       <span class="page-footer__copyright-text">HTML Academy</span>
-      <svg class="page-footer__copyright-icon" width="27" height="34" aria-hidden="true" focusable="false">
+      <svg class="page-footer__copyright-icon" width="28" height="35" aria-hidden="true" focusable="false">
         <use href="img/sprite.svg#htmlacademy"></use>
       </svg>
     </a>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init" async></script>
+  <script src="js/burger-menu.js"></script>
+  <script src="js/map.js"></script>
 </body>
 </html>

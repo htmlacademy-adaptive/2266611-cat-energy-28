@@ -1,0 +1,122 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 65px;
+  padding: 0 20px;
+
+  border-bottom: 1px solid $color-gainsboro;
+}
+
+// logo image
+
+.page-header__mascot {
+  display: block;
+  margin-bottom: 7px;
+}
+
+.page-header__wordmarks {
+  display: block;
+  margin-right: 8px;
+}
+
+// burger
+
+.page-header__toggle {
+  width: 24px;
+  height: 18px;
+  padding: 0;
+
+  background: $transparent;
+  border: none;
+  cursor: pointer;
+
+  .no-js & {
+    cursor: default;
+    opacity: 0;
+  }
+}
+
+.page-header__toggle-line {
+  display: block;
+  height: 2px;
+
+  background-color: $color-black;
+
+  transition: all 0.3s;
+
+  &--top {
+    margin-bottom: 6px;
+  }
+
+  &--low {
+    margin-top: 6px;
+  }
+
+  .is-open & {
+    &--top {
+      margin-bottom: 0;
+
+      transform: rotate(-45deg);
+    }
+
+    &--mid {
+      transform: scale(0);
+    }
+
+    &--low {
+      margin-top: -4px;
+
+      transform: rotate(45deg);
+    }
+  }
+}
+
+// navigation
+
+.page-header__nav {
+  position: absolute;
+  z-index: 5;
+
+  display: none;
+  width: 100%;
+
+  .no-js & {
+    position: relative;
+
+    display: block;
+  }
+
+  .is-open & {
+    display: block;
+  }
+}
+
+.page-header__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-align: center;
+}
+
+.page-header__item {
+  background-color: $color-white;
+  box-shadow: 0 0 0 1px $color-whisper-b;
+}
+
+.page-header__link {
+  display: block;
+  padding: 22px 50px 24px 50px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: $color-black;
+  text-transform: uppercase;
+}
