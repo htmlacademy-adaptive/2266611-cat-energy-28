@@ -1,11 +1,15 @@
 .slider {
   display: grid;
   width: min(100%, 280px);
-  margin: 0 auto;
 
   aspect-ratio: 280/256;
-  grid-column: 1/-1;
   grid-template-columns: calc(50% - 2px) auto calc(50% - 2px);
+
+  @media (min-width: $vp-768) {
+    width: min(100%, 560px);
+
+    aspect-ratio: 560/512;
+  }
 }
 
 .slider__image {
@@ -34,6 +38,15 @@
 
   background-color: currentColor;
   border-radius: 2px;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-apple;
+  }
+
+  &:active {
+    color: rgba($color-apple, 0.6);
+  }
 }
 
 .slider__thumb {
@@ -50,6 +63,7 @@
   border: 2px solid currentColor;
   border-radius: 50%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -62,5 +76,10 @@
 
     mask-image: url("../img/svg/slider-arrow.svg");
     mask-repeat: no-repeat;
+  }
+
+  &:focus-visible {
+    outline: 3px dotted $color-flamingo;
+    outline-offset: 2px;
   }
 }

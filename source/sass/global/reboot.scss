@@ -23,4 +23,9 @@ body {
 
 a {
   text-decoration: none;
+
+  &:focus-visible {
+    outline: 3px dotted $color-flamingo;
+    outline-offset: 2px;
+  }
 }

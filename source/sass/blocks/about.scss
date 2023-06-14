@@ -1,5 +1,16 @@
 .about {
-  padding: 0 20px 49px 20px;
+  padding-top: 20px;
+  padding-bottom: 49px;
+
+  @media (min-width: $vp-768) {
+    padding-top: 45px;
+    padding-bottom: 47px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding-top: 71px;
+    padding-bottom: 69px;
+  }
 }
 
 .about__title {
@@ -8,6 +19,13 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: $vp-768) {
+    margin: 0 0 32px 0;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .about__list {
@@ -17,7 +35,21 @@
 
   list-style: none;
 
+  counter-reset: number 0;
+
   gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  @media (min-width: $vp-768) {
+    column-gap: 140px;
+
+    grid-template-columns: repeat(auto-fill, 245px);
+    row-gap: 37px;
+  }
+
+  @media (min-width: $vp-1440) {
+    column-gap: 80px;
+  }
 }
 
 .about__item {
@@ -29,6 +61,8 @@
   font-family: $ff-lato;
   color: $color-charcoal;
 
+  counter-increment: number;
+
   &::before {
     content: "";
     position: absolute;
@@ -38,7 +72,10 @@
     width: 60px;
     height: 60px;
 
+    background-color: $color-apple;
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
   }
 
   &--healthy::before {
@@ -55,5 +92,36 @@
 
   &--effect::before {
     background-image: url("../img/svg/effect-icon.svg");
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 151px 0 57px 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      top: 40px;
+
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: counter(number);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -5;
+
+      font-size: 280px;
+      line-height: 280px;
+      font-family: $ff-oswald;
+      color: $color-white-smoke;
+    }
+
+    &:first-child::after {
+      right: 20px;
+    }
   }
 }

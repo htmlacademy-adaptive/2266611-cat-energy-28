@@ -1,10 +1,10 @@
 function init(ymaps) {
   const map = new ymaps.Map('map', {
-    center: [59.93863106417265, 30.323036499999905],
+    center: [59.938870, 30.323100],
     zoom: 14
   });
 
-  const placemark = new ymaps.Placemark([59.93863106417265, 30.323036499999905], {
+  const placemark = new ymaps.Placemark([59.938635, 30.323118], {
     balloonContentHeader: 'Cat Energy',
     balloonContentBody: 'Большая Конюшенная ул., 19/8, 191186',
     balloonContentFooter: 'Адмиралтейский р-н'
@@ -12,7 +12,7 @@ function init(ymaps) {
     iconLayout: 'default#image',
     iconImageHref: "img/svg/map-marker.svg",
     iconImageSize: [57, 53],
-    iconImageOffset: [-24, -42]
+    iconImageOffset: [-26, -48]
   });
 
   map.controls.remove('geolocationControl');

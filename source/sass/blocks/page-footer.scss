@@ -1,27 +1,62 @@
 .page-footer {
-  display: grid;
-  padding: 40px 20px;
+  padding: 40px 0;
 
   background-color: $color-white-smoke;
 
+  @media (min-width: $vp-768) {
+    padding: 55px 0;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 66px 0;
+  }
+}
+
+.page-footer__wrapper {
+  display: grid;
+
   gap: 20px;
+
+  @media (min-width: $vp-768) {
+    align-items: start;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .page-footer__logo {
   display: block;
 
   justify-self: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $vp-768) {
+    justify-self: start;
+  }
 }
 
 .page-footer__wordmarks {
   display: block;
+
+  @media (min-width: $vp-768) {
+    width: 143px;
+    height: 26px;
+    margin-top: 5px;
+  }
 }
 
 .page-footer__list {
   display: grid;
   justify-content: center;
   margin: 0;
-  padding: 20px 0 20px 0;
+  padding: 19px 0 19px 0;
 
   list-style: none;
   column-gap: 23px;
@@ -31,28 +66,31 @@
 
   grid-template-columns: repeat(3, max-content);
   row-gap: 10px;
+
+  @media (min-width: $vp-768) {
+    margin-top: 8px;
+    padding: 0;
+
+    border-top: none;
+    border-bottom: none;
+  }
 }
 
 .page-footer__link {
   display: block;
   width: 29px;
   height: 22px;
-  margin: 0;
 
-  background-color: $color-dim-gray;
+  color: $color-dim-gray;
 
-  mask-repeat: no-repeat;
+  &:hover {
+    color: $color-apple;
 
-  &--vkontakte {
-    mask-image: url("../img/svg/vkontakte.svg");
+    transition-duration: 0.3s;
   }
 
-  &--youtube {
-    mask-image: url("../img/svg/youtube.svg");
-  }
-
-  &--telegram {
-    mask-image: url("../img/svg/telegram.svg");
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -66,12 +104,30 @@
   color: $color-charcoal;
 
   justify-self: center;
+
+  &:hover .page-footer__copyright-icon {
+    color: $color-apple;
+
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $vp-768) {
+    justify-self: end;
+  }
 }
 
 .page-footer__copyright-text {
   display: block;
   max-width: 200px;
   margin-right: 139px;
+
+  @media (min-width: $vp-768) {
+    margin-right: 28px;
+  }
 }
 
 .page-footer__copyright-icon {

@@ -115,9 +115,15 @@
 
   background-color: rgba($color-apple, 0.85);
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
+
+    background-repeat: no-repeat;
+  }
+
+  &::before {
     top: 59px;
     left: 50%;
 
@@ -125,13 +131,10 @@
     height: 80px;
 
     background-image: url("../img/svg/gift-icon.svg");
-    background-repeat: no-repeat;
     transform: translateX(-50%);
   }
 
   &::after {
-    content: "";
-    position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
@@ -140,7 +143,6 @@
     height: 100%;
 
     background-image: url("../img/background/bonus-cat.jpg");
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
