@@ -12,7 +12,12 @@
 <body>
   <header class="page-header page-header--main no-js">
     <div class="page-header__container container">
-      <div class="page-header__wrapper">
+      <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
+        <span class="page-header__toggle-line page-header__toggle-line--top"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--low"></span>
+      </button>
+      <nav class="page-header__nav">
         <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу." aria-current="page">
           <picture>
             <source media="(min-width: 1440px)" srcset="img/content/mascot-desktop.svg" width="202" height="59">
@@ -20,13 +25,6 @@
             <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="191" height="38" alt="Логотип Cat Energy.">
           </picture>
         </a>
-        <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
-          <span class="page-header__toggle-line page-header__toggle-line--top"></span>
-          <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
-          <span class="page-header__toggle-line page-header__toggle-line--low"></span>
-        </button>
-      </div>
-      <nav class="page-header__nav">
         <ul class="page-header__list">
           <li class="page-header__item">
             <a class="page-header__link page-header__link--current page-header__link--white" href="#" aria-current="page" tabindex="-1">Главная</a>
