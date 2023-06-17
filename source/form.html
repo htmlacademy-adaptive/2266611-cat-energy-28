@@ -39,118 +39,128 @@
   <main class="page-main">
     <h1 class="visually-hidden">Форма обратной связи интернет-магазина Cat Energy.</h1>
     <section class="application">
-      <div class="application__heading">
+      <div class="application__heading container">
         <h2 class="application__title">Подбор программы</h2>
         <p class="application__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
       <form class="application__form" action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset class="application__fieldset application__fieldset--half">
-          <legend class="visually-hidden">Персональные данные кота</legend>
-          <ul class="application__list">
-            <li class="application__item">
-              <label class="application__contact">
-                <span class="application__sign">Имя:*</span>
-                <input class="application__area" type="text" name="name" placeholder="Барсик" required>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__contact">
-                <span class="application__sign">Вес (кг):*</span>
-                <input class="application__area" type="text" name="weight" placeholder="7" required>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__contact">
-                <span class="application__sign">Возраст (лет):</span>
-                <input class="application__area" type="text" name="age" placeholder="7">
-              </label>
-            </li>
-          </ul>
+        <div class="application__personal container">
+          <fieldset class="application__fieldset">
+            <h3 class="visually-hidden">Персональные данные кота</h3>
+            <ul class="application__list">
+              <li class="application__item">
+                <label class="application__contact">
+                  <span class="application__sign">Имя:*</span>
+                  <input class="application__area" type="text" name="name" placeholder="Барсик" required>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__contact">
+                  <span class="application__sign">Вес (кг):*</span>
+                  <input class="application__area" type="text" name="weight" placeholder="7" required>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__contact">
+                  <span class="application__sign">Возраст (лет):</span>
+                  <input class="application__area" type="text" name="age" placeholder="7">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="application__fieldset application__fieldset--programs">
+            <h3 class="visually-hidden">Выбор программы питания</h3>
+            <ul class="application__list application__list--radio">
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="radio" name="program" value="slim" checked>
+                  <span class="application__mark application__mark--radio"></span>
+                  <span class="application__value">Похудение</span>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="radio" name="program" value="pro">
+                  <span class="application__mark application__mark--radio"></span>
+                  <span class="application__value">Набор массы</span>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="radio" name="program" value="doubt">
+                  <span class="application__mark application__mark--radio"></span>
+                  <span class="application__value">Не знаю (нужен ваш совет)</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
+        <fieldset class="application__fieldset application__fieldset--contacts">
+          <div class="application__container container">
+            <h3 class="application__subtitle">Контактные данные (владельца кота)</h3>
+            <ul class="application__list">
+              <li class="application__item">
+                <label class="application__contact">
+                  <span class="application__sign">E-mail:*</span>
+                  <input class="application__area application__area--mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
+                  <span class="application__icon application__icon--mail"></span>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__contact">
+                  <span class="application__sign">Телефон:*</span>
+                  <input class="application__area application__area--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                  <span class="application__icon application__icon--phone"></span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
-        <fieldset class="application__fieldset application__fieldset--half">
-          <legend class="visually-hidden">Выбор программы питания</legend>
-          <ul class="application__list application__list--radio">
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="radio" name="program" value="slim" checked>
-                <span class="application__mark application__mark--radio"></span>
-                <span class="application__value">Похудение</span>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="radio" name="program" value="pro">
-                <span class="application__mark application__mark--radio"></span>
-                <span class="application__value">Набор массы</span>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="radio" name="program" value="doubt">
-                <span class="application__mark application__mark--radio"></span>
-                <span class="application__value">Не знаю (нужен ваш совет)</span>
-              </label>
-            </li>
-          </ul>
+        <fieldset class="application__fieldset application__fieldset--comments">
+          <div class="application__container container">
+            <h3 class="application__subtitle">Комментарий</h3>
+            <label class="application__textarea">
+              <span class="visually-hidden">Опишите особенности поведения вашего кота.</span>
+              <textarea class="application__area application__area--textarea" name="comment" aria-label="Ваш комментарий." placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
+          </div>
         </fieldset>
-        <fieldset class="application__fieldset">
-          <legend class="application__subtitle">Контактные данные (владельца кота)</legend>
-          <ul class="application__list application__list--owner">
-            <li class="application__item">
-              <label class="application__contact">
-                <span class="application__sign">E-mail:*</span>
-                <input class="application__area application__area--mail" type="email" name="mail" placeholder="kuklachev@gmail.com" required>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__contact">
-                <span class="application__sign">Телефон:*</span>
-                <input class="application__area application__area--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
-              </label>
-            </li>
-          </ul>
+        <fieldset class="application__fieldset application__fieldset--additional">
+          <div class="application__container container">
+            <h3 class="application__subtitle">Дополнительно</h3>
+            <ul class="application__list application__list--checkbox">
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="checkbox" name="product" value="sweetener" checked>
+                  <span class="application__mark application__mark--checkbox"></span>
+                  <span class="application__value">Сахарозаменитель</span>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="checkbox" name="product" value="water">
+                  <span class="application__mark application__mark--checkbox"></span>
+                  <span class="application__value">Питьевая вода</span>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="checkbox" name="product" value="milk">
+                  <span class="application__mark application__mark--checkbox"></span>
+                  <span class="application__value">Молоко</span>
+                </label>
+              </li>
+              <li class="application__item">
+                <label class="application__control">
+                  <input class="application__control-input visually-hidden" type="checkbox" name="product" value="vitamins">
+                  <span class="application__mark application__mark--checkbox"></span>
+                  <span class="application__value">Витамины</span>
+                </label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
-        <fieldset class="application__fieldset">
-          <legend class="application__subtitle">Комментарий</legend>
-          <label class="application__contact">
-            <span class="visually-hidden">Опишите особенности поведения вашего кота.</span>
-            <textarea class="application__area application__area--textarea" name="comment" aria-label="Ваш комментарий." placeholder="Расскажите обо всех повадках кота"></textarea>
-          </label>
-        </fieldset>
-        <fieldset class="application__fieldset">
-          <legend class="application__subtitle">Дополнительно</legend>
-          <ul class="application__list application__list--checkbox">
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="sweetener" checked>
-                <span class="application__mark application__mark--checkbox"></span>
-                <span class="application__value">Сахарозаменитель</span>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="water">
-                <span class="application__mark application__mark--checkbox"></span>
-                <span class="application__value">Питьевая вода</span>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="milk">
-                <span class="application__mark application__mark--checkbox"></span>
-                <span class="application__value">Молоко</span>
-              </label>
-            </li>
-            <li class="application__item">
-              <label class="application__control">
-                <input class="application__control-input visually-hidden" type="checkbox" name="product" value="vitamins">
-                <span class="application__mark application__mark--checkbox"></span>
-                <span class="application__value">Витамины</span>
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <div class="application__button-wrapper">
+        <div class="application__button-wrapper container">
           <button class="application__submit-button button" type="submit">Отправить заявку</button>
           <span class="application__stint">* — Обязательные поля</span>
         </div>

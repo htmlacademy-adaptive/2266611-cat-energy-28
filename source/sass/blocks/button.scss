@@ -17,4 +17,9 @@
   &:active {
     color: rgba($color-white, 0.3);
   }
+
+  &:focus-visible {
+    outline: 3px dotted $color-flamingo;
+    outline-offset: 2px;
+  }
 }
