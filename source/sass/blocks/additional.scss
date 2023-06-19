@@ -1,14 +1,21 @@
 .additional {
-  padding: 25px 0 35px 0;
-  overflow: hidden;
+  position: relative;
+
+  padding-bottom: 35px;
+
+  @media (min-width: $vp-768) {
+    padding-bottom: 74px;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding-bottom: 86px;
+  }
 }
 
 .additional__title {
-  position: relative;
-
   width: max-content;
   max-width: 300px;
-  margin: 0 0 36px 0;
+  margin: 0 0 35px -20px;
   padding: 0 21px 0 20px;
 
   font-weight: 400;
@@ -21,6 +28,7 @@
     content: "";
     position: absolute;
     top: 15px;
+    left: 0;
     z-index: -1;
 
     width: 200vw;
@@ -28,10 +36,35 @@
 
     background-color: $color-apple;
   }
+
+  @media (min-width: $vp-768) {
+    max-width: 420px;
+    margin: 0 0 80px 0;
+    padding: 0 36px 0 37px;
+
+    font-size: 36px;
+    line-height: 36px;
+
+    &::after {
+      top: 22px;
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0 0 79px -40px;
+    padding: 0 35px 0 40px;
+  }
 }
 
 .additional__wrapper {
-  padding: 0 20px 0 20px;
+  @media (min-width: $vp-1440) {
+    display: grid;
+    align-items: start;
+
+    column-gap: 80px;
+
+    grid-template-columns: 1fr 245px;
+  }
 }
 
 .additional__list {
@@ -39,17 +72,26 @@
   padding: 0;
 
   list-style: none;
+
+  @media (min-width: $vp-768) {
+    box-shadow: 0 0 0 1px $color-very-light-grey inset;
+  }
+
+  @media (min-width: $vp-1440) {
+    box-shadow: none;
+  }
 }
 
 .additional__item {
   position: relative;
 
-  padding: 13px 0 19px 0;
+  padding: 11px 0 17px 0;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
+    left: 0;
 
     width: 100%;
     height: 1px;
@@ -61,11 +103,30 @@
     content: "";
     position: absolute;
     bottom: 0;
+    left: 0;
 
     width: 100%;
     height: 1px;
 
     background-color: $color-very-light-grey;
+  }
+
+  @media (min-width: $vp-768) {
+    display: grid;
+    padding: 26px 38px 28px 38px;
+
+    column-gap: 40px;
+
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 22px;
+  }
+
+  @media (min-width: $vp-1440) {
+    align-items: center;
+    padding: 15px 0 17px 0;
+
+    gap: 40px;
+    grid-template-columns: 1fr 285px 244px;
   }
 }
 
@@ -77,35 +138,89 @@
   line-height: 16px;
   color: $color-nero;
   text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional__points {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   margin: 0 0 15px 0;
 
   font-family: $ff-lato;
   color: $color-charcoal;
+
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: $vp-768) {
+    margin: 0 6px 0 0;
+    padding-top: 3px;
+
+    font-size: 16px;
+    line-height: 20px;
+
+    gap: 15px;
+    grid-template-columns: 1fr 78px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0;
+    padding-top: 6px;
+
+    gap: 11px;
+    grid-template-columns: 1fr minmax(42px, max-content);
+  }
 }
 
 .additional__term {
   max-width: 150px;
+  padding: 0;
+
+  @media (min-width: $vp-768) {
+    justify-self: end;
+  }
+
+  @media (min-width: $vp-1440) {
+    justify-self: start;
+  }
 }
 
 .additional__definition {
-  max-width: 110px;
   margin: 0;
+  padding: 0;
+
+  justify-self: end;
+
+  @media (min-width: $vp-1440) {
+    justify-self: start;
+  }
 }
 
 .additional__link {
   padding: 10px 20px;
+
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: $vp-768) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: $vp-1440) {
+    grid-column: 3/-1;
+  }
 }
 
 .additional__bonus {
   position: relative;
 
   margin: 35px 0 0 0;
-  padding: 187px 59px 43px 59px;
+  padding: 187px 59px 43px 57px;
 
   font-size: 16px;
   line-height: 20px;
@@ -149,5 +264,35 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/bonus-cat@2x.jpg");
     }
+  }
+
+  @media (min-width: $vp-768) and (max-width: ($vp-1440 - 1px)) {
+    margin: 70px 0 0 0;
+    padding: 71px 124px 69px 422px;
+
+    text-align: start;
+
+    &::before {
+      top: 50%;
+      left: 78px;
+
+      width: 80px;
+      height: 82px;
+
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      background-image: url("../img/background/bonus-cat-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/bonus-cat-tablet@2x.jpg");
+      }
+    }
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0;
+    padding: 185px 43px 42px 41px;
   }
 }
