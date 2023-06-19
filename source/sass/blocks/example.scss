@@ -119,6 +119,8 @@
 }
 
 .example__item {
+  position: relative;
+
   width: 100%;
   padding: 14px 10px 17px 10px;
 
@@ -126,7 +128,7 @@
   box-shadow: 0 0 0 1px $color-very-light-grey;
 
   @media (min-width: $vp-768) {
-    padding: 14px 0 23px 0;
+    padding: 14px 0 20px 0;
   }
 }
 
@@ -144,8 +146,11 @@
 }
 
 .example__text {
+  position: absolute;
+  left: 50%;
+
   width: 90px;
-  margin: auto auto -33px auto;
+  margin: 0;
   padding: 9px 15px 0 15px;
 
   font-size: 12px;
@@ -154,10 +159,11 @@
   color: $color-charcoal;
 
   background-color: $color-whisper;
+  transform: translateX(-50%);
 
   @media (min-width: $vp-768) {
     width: max-content;
-    padding: 16px 12px 0 12px;
+    padding: 12px 9px 0 9px;
 
     font-size: 14px;
     line-height: 14px;

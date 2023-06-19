@@ -68,7 +68,6 @@
 
   @media (min-width: $vp-768) {
     max-width: 180px;
-    margin-top: -4px;
 
     font-size: 16px;
     text-align: end;
@@ -85,7 +84,7 @@
   display: block;
 
   @media (min-width: $vp-768) {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
 

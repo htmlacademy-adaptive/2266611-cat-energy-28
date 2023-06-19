@@ -88,7 +88,7 @@
 // form
 // ------------------------
 
-.application__form {
+.application__form-wrapper {
   display: flex;
   flex-wrap: wrap;
 
@@ -168,12 +168,7 @@
 
   &--additional {
     .application__subtitle {
-      margin-top: -2px;
       margin-bottom: 34px;
-    }
-
-    .application__subtitle::after {
-      margin-top: -2px;
     }
   }
 
@@ -209,12 +204,7 @@
 
     &--additional {
       .application__subtitle {
-        margin-top: 0;
         margin-bottom: 57px;
-      }
-
-      .application__subtitle::after {
-        margin-top: 0;
       }
     }
   }
@@ -572,14 +562,21 @@
 // ------------------------
 
 .application__button-wrapper {
+  margin-top: 34px;
+
   @media (min-width: $vp-768) {
     display: flex;
+    align-items: center;
+    margin-top: 54px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin-top: 61px;
   }
 }
 
 .application__submit-button {
   width: 100%;
-  margin-top: 10px;
   padding: 10px 20px;
 
   font-size: 16px;
@@ -587,7 +584,6 @@
 
   @media (min-width: $vp-768) {
     max-width: 282px;
-    margin-top: -11px;
     padding: 13px 45px;
 
     font-size: 20px;
@@ -596,7 +592,6 @@
 
   @media (min-width: $vp-1440) {
     max-width: 568px;
-    margin-top: -4px;
   }
 }
 
@@ -609,12 +604,12 @@
   text-align: center;
 
   @media (min-width: $vp-768) {
-    margin: 3px 0 0 62px;
+    margin: 0 0 8px 62px;
 
     font-size: 16px;
   }
 
   @media (min-width: $vp-1440) {
-    margin: 13px 0 0 82px;
+    margin: 0 0 0 82px;
   }
 }
