@@ -130,7 +130,7 @@
   }
 }
 
-.additional__subitle {
+.additional__subtitle {
   margin: 0 0 13px 0;
 
   font-weight: 400;
@@ -172,7 +172,7 @@
     margin: 0;
     padding-top: 6px;
 
-    gap: 11px;
+    gap: 30px;
     grid-template-columns: 1fr minmax(42px, max-content);
   }
 }
@@ -186,6 +186,8 @@
   }
 
   @media (min-width: $vp-1440) {
+    min-width: 131px;
+
     justify-self: start;
   }
 }

@@ -2,7 +2,7 @@
   padding-top: 20px;
 
   @media (min-width: $vp-768) {
-    padding: 0;
+    padding-top: 0;
   }
 
   @media (min-width: $vp-1440) {
@@ -13,6 +13,8 @@
 .products__list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 
@@ -30,6 +32,7 @@
 .products__item {
   position: relative;
 
+  display: grid;
   width: 100%;
   padding: 30px 20px 18px 20px;
 
@@ -179,7 +182,7 @@
 
   display: block;
   width: max-content;
-  max-width: 200px;
+  max-width: 185px;
   padding: 4px 0 4px 0;
 
   font-size: 16px;
@@ -213,6 +216,8 @@
   }
 
   @media (min-width: $vp-768) {
+    align-self: end;
+
     font-size: 20px;
     line-height: 30px;
 

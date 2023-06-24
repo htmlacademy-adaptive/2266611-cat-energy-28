@@ -32,17 +32,13 @@
 }
 
 .catalog__title {
+  max-width: 600px;
   margin: 0 0 41px 0;
 
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  @include font(36px, 36px);
 
   @media (min-width: $vp-768) {
     margin: 0 0 163px 0;
-
-    font-size: 60px;
-    line-height: 60px;
   }
 
   @media (min-width: $vp-1440) {
@@ -171,6 +167,12 @@
 
   grid-row: 1/3;
 
+  &:hover {
+    .catalog__image {
+      transform: scale(1.03);
+    }
+  }
+
   @media (min-width: $vp-768) {
     position: absolute;
     top: -73px;
@@ -192,6 +194,8 @@
 
 .catalog__image {
   display: block;
+
+  transition: transform 0.3s ease;
 }
 
 .catalog__subtitle {
@@ -202,6 +206,14 @@
   line-height: 20px;
   color: $color-nero;
   text-transform: uppercase;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $vp-768) {
     max-width: 150px;
@@ -239,9 +251,8 @@
 }
 
 .catalog__table {
-  align-self: start;
+  margin: 0;
 
-  border-collapse: collapse;
   font-size: 12px;
   line-height: 16px;
   font-family: $ff-lato;
@@ -253,22 +264,26 @@
 }
 
 .catalog__row {
-  @media (min-width: $vp-768) {
-    border-bottom: 1px solid $color-very-light-grey;
+  display: flex;
+  justify-content: space-between;
 
-    td {
-      padding-top: 7px;
-      padding-bottom: 8px;
-    }
+  gap: 10px;
+
+  @media (min-width: $vp-768) {
+    padding-top: 7px;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid $color-very-light-grey;
   }
 }
 
 .catalog__term {
-  padding: 0;
+  width: 50%;
 }
 
 .catalog__definition {
-  padding: 0;
+  width: 50%;
+  margin: 0;
 
   text-align: right;
 }

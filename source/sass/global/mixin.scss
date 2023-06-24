@@ -1,0 +1,12 @@
+@mixin font($size, $height) {
+  font: {
+    size: $size;
+    weight: 400;
+  };
+  line-height: $height;
+
+  @media (min-width: $vp-768) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}

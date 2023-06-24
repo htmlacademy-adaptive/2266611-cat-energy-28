@@ -11,17 +11,13 @@
 }
 
 .application__title {
+  max-width: 600px;
   margin: 0 0 37px 0;
 
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  @include font(36px, 36px);
 
   @media (min-width: $vp-768) {
     margin: 0 0 54px 0;
-
-    font-size: 60px;
-    line-height: 60px;
   }
 
   @media (min-width: $vp-1440) {

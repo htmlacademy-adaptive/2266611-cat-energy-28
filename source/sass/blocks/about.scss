@@ -14,17 +14,13 @@
 }
 
 .about__title {
+  max-width: 600px;
   margin: 0 0 40px 0;
 
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 40px;
+  @include font(36px, 40px);
 
   @media (min-width: $vp-768) {
     margin: 0 0 32px 0;
-
-    font-size: 60px;
-    line-height: 60px;
   }
 }
 

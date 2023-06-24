@@ -70,16 +70,11 @@
   max-width: 250px;
   margin: 0 auto 25px auto;
 
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
+  @include font(36px, 36px);
 
   @media (min-width: $vp-768) {
     max-width: 420px;
     margin: 0 auto 41px 0;
-
-    font-size: 60px;
-    line-height: 60px;
   }
 }
 
