@@ -6,6 +6,9 @@
   <meta name="description" content="Широкий ассортимент кормов Cat Energy по доступным ценам.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи. Каталог</title>
+  <link rel="preload" href="fonts/lato/latoregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -13,36 +16,38 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="page-header page-header--inner container no-js">
-    <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
-      <span class="page-header__toggle-line page-header__toggle-line--top"></span>
-      <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
-      <span class="page-header__toggle-line page-header__toggle-line--low"></span>
-    </button>
-    <nav class="page-header__nav">
-      <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/content/mascot-desktop.svg" width="202" height="59">
-          <source media="(min-width: 768px)" srcset="img/content/mascot-tablet.svg" width="174" height="52">
-          <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="191" height="38" alt="Логотип Cat Energy.">
-        </picture>
-      </a>
-      <ul class="page-header__list">
-        <li class="page-header__item">
-          <a class="page-header__link" href="index.html">Главная</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link page-header__link--current" href="#" aria-current="page" tabindex="-1">Каталог продукции</a>
-        </li>
-        <li class="page-header__item">
-          <a class="page-header__link" href="form.html">Подбор программы</a>
-        </li>
-      </ul>
-    </nav>
+  <header class="page-header page-header--inner no-js">
+    <div class="page-header__container">
+      <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
+        <span class="page-header__toggle-line page-header__toggle-line--top"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
+        <span class="page-header__toggle-line page-header__toggle-line--low"></span>
+      </button>
+      <nav class="page-header__nav">
+        <a class="page-header__logo" href="index.html" aria-label="Переход на главную страницу.">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/content/mascot-desktop.svg" width="202" height="59">
+            <source media="(min-width: 768px)" srcset="img/content/mascot-tablet.svg" width="174" height="52">
+            <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="191" height="38" alt="Логотип Cat Energy.">
+          </picture>
+        </a>
+        <ul class="page-header__list">
+          <li class="page-header__item">
+            <a class="page-header__link" href="index.html">Главная</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link page-header__link--current" href="#" aria-current="page" tabindex="-1">Каталог продукции</a>
+          </li>
+          <li class="page-header__item">
+            <a class="page-header__link" href="form.html">Подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Продукция интернет-магазина Cat Energy.</h1>
-    <section class="catalog container">
+    <section class="catalog">
       <h2 class="catalog__title">Каталог продукции</h2>
       <ul class="catalog__list">
         <li class="catalog__item">
@@ -221,17 +226,15 @@
           <a class="catalog__button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item catalog__item--more">
-          <span class="catalog__subtitle">Показать еще 100500 товаров</span>
+          <span class="catalog__caption">Показать еще 100500 товаров</span>
           <p class="catalog__description">На самом деле вкусов гораздо больше!</p>
           <a class="catalog__link button" href="#">Показать все</a>
         </li>
       </ul>
     </section>
     <section class="additional">
-      <div class="additional__heading container">
-        <h2 class="additional__title">Дополнительные товары</h2>
-      </div>
-      <div class="additional__wrapper container">
+      <h2 class="additional__subject">Дополнительные товары</h2>
+      <div class="additional__wrapper">
         <ul class="additional__list">
           <li class="additional__item">
             <h3 class="additional__subtitle">Сахарозаменитель</h3>
@@ -286,9 +289,9 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+    <div class="page-footer__container">
       <a class="page-footer__logo" href="index.html" aria-label="Переход на главную страницу." aria-current="page">
-        <img class="page-footer__wordmarks" src="img/content/wordmarks.svg" width="128" height="24" alt="Логотип Cat Energy.">
+        <img class="page-footer__word-mark" src="img/content/word-mark.svg" width="128" height="24" alt="Логотип Cat Energy.">
       </a>
       <ul class="page-footer__list">
         <li class="page-footer__item">

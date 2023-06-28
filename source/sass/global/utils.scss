@@ -15,29 +15,6 @@
   clip-path: inset(100%);
 }
 
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 20px;
-
-  @media (min-width: $vp-768) {
-    padding: 0 30px;
-
-    .application & {
-      padding: 0 70px;
-    }
-  }
-
-  @media (min-width: $vp-1440) {
-    padding: 0 110px;
-
-    .application & {
-      padding: 0 110px;
-    }
-  }
-}
-
 .button {
   display: block;
 

@@ -1,12 +1,14 @@
 .application {
-  padding: 28px 0 32px 0;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 28px 20px 32px 20px;
 
   @media (min-width: $vp-768) {
-    padding: 64px 0 72px 0;
+    padding: 64px 70px 72px 70px;
   }
 
   @media (min-width: $vp-1440) {
-    padding: 46px 0 82px 0;
+    padding: 75px 110px 82px 110px;
   }
 }
 
@@ -14,7 +16,7 @@
   max-width: 600px;
   margin: 0 0 37px 0;
 
-  @include font(36px, 36px);
+  @include title(36px, 36px);
 
   @media (min-width: $vp-768) {
     margin: 0 0 54px 0;
@@ -41,7 +43,9 @@
   }
 }
 
-.application__subtitle {
+.application__subject {
+  position: relative;
+
   width: max-content;
   max-width: 228px;
   margin: 0 0 0 -23px;
@@ -58,7 +62,7 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 0;
+    left: -50vw;
     z-index: -1;
 
     width: 200vw;
@@ -87,26 +91,12 @@
 .application__form-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
   gap: 24px;
 
   @media (min-width: $vp-768) {
     gap: 65px;
-  }
-}
-
-.application__personal {
-  display: grid;
-
-  gap: 24px;
-
-  @media (min-width: $vp-768) {
-    gap: 65px;
-  }
-
-  @media (min-width: $vp-1440) {
-    gap: 80px;
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -142,12 +132,12 @@
     }
 
     &::after {
-      bottom: 2px;
+      bottom: 0;
     }
   }
 
   &--contacts {
-    .application__subtitle {
+    .application__subject {
       margin-bottom: 35px;
     }
 
@@ -157,13 +147,13 @@
   }
 
   &--comments {
-    .application__subtitle {
+    .application__subject {
       margin-bottom: 37px;
     }
   }
 
   &--additional {
-    .application__subtitle {
+    .application__subject {
       margin-bottom: 34px;
     }
   }
@@ -183,7 +173,7 @@
     }
 
     &--contacts {
-      .application__subtitle {
+      .application__subject {
         margin-bottom: 76px;
       }
 
@@ -193,20 +183,25 @@
     }
 
     &--comments {
-      .application__subtitle {
+      .application__subject {
         margin-bottom: 76px;
       }
     }
 
     &--additional {
-      .application__subtitle {
+      .application__subject {
         margin-bottom: 57px;
       }
     }
   }
 
   @media (min-width: $vp-1440) {
+    &--personal {
+      width: calc(50% - 40px);
+    }
+
     &--programs {
+      width: calc(50% - 40px);
       padding-top: 0;
       padding-bottom: 6px;
     }
@@ -221,14 +216,8 @@
       }
     }
 
-    &--additional {
-      .application__subtitle {
-        margin-top: 2px;
-      }
-
-      .application__subtitle::after {
-        margin-top: 2px;
-      }
+    &--comments {
+      padding-bottom: 2px;
     }
   }
 }
@@ -300,7 +289,7 @@
   color: $color-charcoal;
 
   @media (min-width: $vp-768) {
-    max-width: 120px;
+    max-width: 200px;
   }
 }
 
@@ -356,13 +345,7 @@
     }
   }
 
-  // Error state
-
-  &--error,
-  &--error:hover,
-  &--error:focus,
-  &--error:focus-within,
-  &--error:active {
+  &:invalid:not(:placeholder-shown) {
     outline-width: 2px;
     outline-color: $color-light-coral;
 
@@ -437,17 +420,12 @@
 // ------------------------
 
 .application__control {
-  position: relative;
-
-  display: block;
+  display: grid;
 
   cursor: pointer;
 
-  &:hover {
-    .application__mark {
-      border-color: $color-silver;
-    }
-  }
+  gap: 15px;
+  grid-template-columns: 30px 1fr;
 
   &:active {
     opacity: 0.6;
@@ -455,44 +433,56 @@
 
   &:has(input:disabled) {
     cursor: default;
+    opacity: 1;
+  }
+
+  @media (min-width: $vp-768) {
+    grid-template-columns: 40px 1fr;
   }
 }
 
 .application__value {
   display: block;
-  padding: 6px 0 6px 45px;
+  padding: 6px 0;
 
   color: $color-nero;
 
   @media (min-width: $vp-768) {
-    padding: 5px 0 5px 60px;
-  }
-}
-
-.application__mark {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 30px;
-  height: 30px;
-
-  border: 1px solid $color-very-light-grey;
-
-  &--radio {
-    border-radius: 50%;
-  }
-
-  @media (min-width: $vp-768) {
-    width: 40px;
-    height: 40px;
+    padding: 5px 0;
   }
 }
 
 .application__control-input {
+  position: relative;
+
+  width: 30px;
+  height: 30px;
+  margin: 0;
+
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  appearance: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $color-very-light-grey;
+  }
+
+  &[type="radio"]::after {
+    border-radius: 50%;
+  }
+
   &[type="radio"]:checked {
-    + .application__mark::after {
+    &::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -513,7 +503,7 @@
   }
 
   &[type="checkbox"]:checked {
-    + .application__mark::after {
+    &::before {
       content: "";
       position: absolute;
       top: 50%;
@@ -535,21 +525,37 @@
     }
   }
 
+  &:hover {
+    &::after {
+      border-color: $color-silver;
+    }
+  }
+
   &:focus-visible {
-    & + .application__mark {
+    &::after {
       border-width: 2px;
       border-color: $color-charcoal;
     }
   }
 
   &:disabled {
-    & + .application__mark {
+    &::after {
       border-color: $color-very-light-grey;
       opacity: 0.3;
     }
 
     & ~ .application__value {
       opacity: 0.3;
+    }
+  }
+
+  @media (min-width: $vp-768) {
+    width: 40px;
+    height: 40px;
+
+    &::after {
+      width: 40px;
+      height: 40px;
     }
   }
 }

@@ -1,8 +1,6 @@
-@mixin font($size, $height) {
-  font: {
-    size: $size;
-    weight: 400;
-  };
+@mixin title($size, $height) {
+  font-weight: 400;
+  font-size: $size;
   line-height: $height;
 
   @media (min-width: $vp-768) {

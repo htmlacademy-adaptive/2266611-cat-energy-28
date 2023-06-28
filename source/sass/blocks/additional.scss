@@ -1,18 +1,20 @@
 .additional {
-  position: relative;
-
-  padding-bottom: 35px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 25px 20px 35px 20px;
 
   @media (min-width: $vp-768) {
-    padding-bottom: 74px;
+    padding: 93px 30px 74px 30px;
   }
 
   @media (min-width: $vp-1440) {
-    padding-bottom: 86px;
+    padding: 75px 110px 86px 110px;
   }
 }
 
-.additional__title {
+.additional__subject {
+  position: relative;
+
   width: max-content;
   max-width: 300px;
   margin: 0 0 35px -20px;
@@ -28,7 +30,7 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 0;
+    left: -50vw;
     z-index: -1;
 
     width: 200vw;
@@ -153,9 +155,10 @@
 
   font-family: $ff-lato;
   color: $color-charcoal;
+  column-gap: 30px;
 
-  gap: 30px;
   grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
 
   @media (min-width: $vp-768) {
     margin: 0 6px 0 0;
@@ -172,7 +175,8 @@
     margin: 0;
     padding-top: 6px;
 
-    gap: 30px;
+    column-gap: 30px;
+
     grid-template-columns: 1fr minmax(42px, max-content);
   }
 }

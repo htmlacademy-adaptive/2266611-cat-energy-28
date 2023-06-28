@@ -7,6 +7,9 @@
   <meta name="keywords" content="здоровое питание для кошек, функциональное питание, подбор программы питания">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="preload" href="fonts/lato/latoregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -15,7 +18,7 @@
 </head>
 <body>
   <header class="page-header page-header--main no-js">
-    <div class="page-header__container container">
+    <div class="page-header__container">
       <button class="page-header__toggle" type="button" aria-label="Открыть/закрыть меню.">
         <span class="page-header__toggle-line page-header__toggle-line--top"></span>
         <span class="page-header__toggle-line page-header__toggle-line--mid"></span>
@@ -29,15 +32,15 @@
             <img class="page-header__mascot" src="img/content/mascot-mobile.svg" width="191" height="38" alt="Логотип Cat Energy.">
           </picture>
         </a>
-        <ul class="page-header__list">
+        <ul class="page-header__list page-header__list--main">
           <li class="page-header__item">
-            <a class="page-header__link page-header__link--current page-header__link--white" href="#" aria-current="page" tabindex="-1">Главная</a>
+            <a class="page-header__link page-header__link--current" href="#" aria-current="page" tabindex="-1">Главная</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link page-header__link--white" href="catalog.html">Каталог продукции</a>
+            <a class="page-header__link" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="page-header__item">
-            <a class="page-header__link page-header__link--white" href="form.html">Подбор программы</a>
+            <a class="page-header__link" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -57,22 +60,22 @@
   </header>
   <main class="page-main">
     <h1 class="visually-hidden">Сайт интернет-магазина Cat Energy.</h1>
-    <section class="products container">
+    <section class="products">
       <h2 class="visually-hidden">Наши продуктовые линейки.</h2>
       <ul class="products__list">
         <li class="products__item products__item--slim">
-          <h3 class="products__title">Похудение</h3>
+          <h3 class="products__subtitle">Похудение</h3>
           <p class="products__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="products__link" href="#">Каталог Slim</a>
         </li>
         <li class="products__item products__item--pro">
-          <h3 class="products__title">Набор массы</h3>
+          <h3 class="products__subtitle">Набор массы</h3>
           <p class="products__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="products__link" href="#">Каталог Pro</a>
         </li>
       </ul>
     </section>
-    <section class="about container">
+    <section class="about">
       <h2 class="about__title">Как это работает</h2>
       <ul class="about__list">
         <li class="about__item about__item--healthy">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -81,7 +84,7 @@
         <li class="about__item about__item--effect">Уже через месяц наслаждайтесь изменениями к лучшему вашего&nbsp;питомца!</li>
       </ul>
     </section>
-    <section class="example container">
+    <section class="example">
       <h2 class="example__title">Живой пример</h2>
       <div class="example__wrapper">
         <p class="example__description">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без&nbsp;изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и&nbsp;по-прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
@@ -128,9 +131,9 @@
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+    <div class="page-footer__container">
       <a class="page-footer__logo" href="index.html" aria-label="Возврат в начало страницы." aria-current="page">
-        <img class="page-footer__wordmarks" src="img/content/wordmarks.svg" width="128" height="24" alt="Логотип Cat Energy.">
+        <img class="page-footer__word-mark" src="img/content/word-mark.svg" width="128" height="24" alt="Логотип Cat Energy.">
       </a>
       <ul class="page-footer__list">
         <li class="page-footer__item">
