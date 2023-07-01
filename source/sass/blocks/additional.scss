@@ -30,13 +30,14 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: -50vw;
+    left: 50%;
     z-index: -1;
 
     width: 200vw;
     height: 2px;
 
     background-color: $color-apple;
+    transform: translateX(-50%);
   }
 
   @media (min-width: $vp-768) {
@@ -59,8 +60,15 @@
 }
 
 .additional__wrapper {
+  display: grid;
+
+  row-gap: 35px;
+
+  @media (min-width: $vp-768) {
+    row-gap: 70px;
+  }
+
   @media (min-width: $vp-1440) {
-    display: grid;
     align-items: start;
 
     column-gap: 80px;
@@ -87,6 +95,7 @@
 .additional__item {
   position: relative;
 
+  display: grid;
   padding: 11px 0 17px 0;
 
   &::before {
@@ -114,7 +123,6 @@
   }
 
   @media (min-width: $vp-768) {
-    display: grid;
     padding: 26px 38px 28px 38px;
 
     column-gap: 40px;
@@ -161,8 +169,7 @@
   row-gap: 15px;
 
   @media (min-width: $vp-768) {
-    margin: 0 6px 0 0;
-    padding-top: 3px;
+    margin: 3px 6px 0 0;
 
     font-size: 16px;
     line-height: 20px;
@@ -172,8 +179,7 @@
   }
 
   @media (min-width: $vp-1440) {
-    margin: 0;
-    padding-top: 6px;
+    margin: 6px 0 0 0;
 
     column-gap: 30px;
 
@@ -213,6 +219,8 @@
   font-size: 16px;
   line-height: 20px;
 
+  @include button;
+
   @media (min-width: $vp-768) {
     grid-column: 1/-1;
   }
@@ -225,7 +233,7 @@
 .additional__bonus {
   position: relative;
 
-  margin: 35px 0 0 0;
+  margin: 0;
   padding: 187px 59px 43px 57px;
 
   font-size: 16px;
@@ -245,17 +253,6 @@
   }
 
   &::before {
-    top: 59px;
-    left: 50%;
-
-    width: 78px;
-    height: 80px;
-
-    background-image: url("../img/svg/gift-icon.svg");
-    transform: translateX(-50%);
-  }
-
-  &::after {
     top: 0;
     left: 0;
     z-index: -1;
@@ -272,13 +269,31 @@
     }
   }
 
+  &::after {
+    top: 59px;
+    left: 50%;
+
+    width: 78px;
+    height: 80px;
+
+    background-image: url("../img/svg/gift-icon.svg");
+    transform: translateX(-50%);
+  }
+
   @media (min-width: $vp-768) and (max-width: ($vp-1440 - 1px)) {
-    margin: 70px 0 0 0;
     padding: 71px 124px 69px 422px;
 
     text-align: start;
 
     &::before {
+      background-image: url("../img/background/bonus-cat-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/bonus-cat-tablet@2x.jpg");
+      }
+    }
+
+    &::after {
       top: 50%;
       left: 78px;
 
@@ -287,18 +302,9 @@
 
       transform: translateY(-50%);
     }
-
-    &::after {
-      background-image: url("../img/background/bonus-cat-tablet.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/background/bonus-cat-tablet@2x.jpg");
-      }
-    }
   }
 
   @media (min-width: $vp-1440) {
-    margin: 0;
     padding: 185px 43px 42px 41px;
   }
 }

@@ -26,8 +26,6 @@
 
   display: grid;
 
-  grid-template-columns: repeat(2, 1fr);
-
   @media (min-width: $vp-768) {
     grid-template-columns: 366px 1fr;
   }
@@ -76,13 +74,13 @@
   font-family: $ff-lato;
   color: $color-charcoal;
 
-  grid-column: 1/-1;
-
   @media (min-width: $vp-768) {
     margin: 0 0 54px 0;
 
     font-size: 16px;
     line-height: 24px;
+
+    grid-column: 1/-1;
   }
 
   @media (min-width: $vp-1440) {
@@ -100,11 +98,10 @@
   text-align: center;
 
   gap: 32px;
-  grid-column: 1/-1;
   grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: $vp-768) {
-    margin-bottom: 91px;
+    margin: 0 0 91px 0;
 
     gap: 42px;
     grid-column: 1/2;
@@ -112,7 +109,7 @@
 
   @media (min-width: $vp-1440) {
     width: 84%;
-    margin-bottom: 46px;
+    margin: 0 0 46px 0;
   }
 }
 
@@ -132,7 +129,6 @@
   box-shadow: 0 0 0 1px $color-very-light-grey;
 
   @media (min-width: $vp-768) {
-    margin-bottom: 0;
     padding: 14px 10px 20px 10px;
 
     font-size: 30px;
@@ -180,8 +176,6 @@
   text-align: center;
   text-transform: uppercase;
 
-  grid-column: 1/-1;
-
   @media (min-width: $vp-768) {
     max-width: 250px;
     margin: 11px 0 0 0;
@@ -208,13 +202,12 @@
 .example__price {
   @media (min-width: $vp-768) {
     display: block;
-    margin-top: 9px;
+    margin: 9px 0 0 0;
   }
 
   @media (min-width: $vp-1440) {
     min-width: 100px;
-    margin-top: 0;
-    margin-left: 66px;
+    margin: 0 0 0 66px;
   }
 }
 

@@ -19,6 +19,7 @@
   padding: 0 20px;
 
   gap: 20px;
+  justify-items: center;
 
   @media (min-width: $vp-768) {
     align-items: start;
@@ -34,8 +35,6 @@
 
 .page-footer__logo {
   display: block;
-
-  justify-self: center;
 
   &:hover {
     opacity: 0.8;
@@ -63,6 +62,7 @@
 .page-footer__list {
   display: grid;
   justify-content: center;
+  width: 100%;
   margin: 0;
   padding: 19px 0 19px 0;
 
@@ -110,8 +110,6 @@
   line-height: 19px;
   font-family: $ff-lato;
   color: $color-charcoal;
-
-  justify-self: center;
 
   &:hover {
     .page-footer__copyright-icon {

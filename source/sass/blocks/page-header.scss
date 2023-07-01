@@ -74,8 +74,6 @@
 
   .no-js & {
     position: static;
-
-    padding: 10px 0 17px 0;
   }
 
   &:hover {
@@ -180,7 +178,7 @@
   z-index: 5;
 
   display: none;
-  flex-direction: column;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -204,8 +202,6 @@
     position: relative;
 
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     max-width: 440px;
     margin-top: 7px;
 
@@ -232,10 +228,14 @@
 }
 
 .page-header__item {
+  width: 100%;
+
   background-color: $color-white;
   box-shadow: 0 0 0 1px $color-whisper-b;
 
   @media (min-width: $vp-768) {
+    width: auto;
+
     background-color: $transparent;
     box-shadow: none;
   }

@@ -3,7 +3,7 @@
     display: grid;
 
     grid-template-columns: auto 565px 655px auto;
-    grid-template-rows: 95px 1fr minmax(107px, 100%);
+    grid-template-rows: 95px 1fr 107px;
   }
 }
 
