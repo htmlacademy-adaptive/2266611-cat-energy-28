@@ -103,21 +103,25 @@
           </dl>
           <p class="example__info">Затраты на питание: <span class="example__price">15 000 руб.</span></p>
           <div class="example__slider slider">
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/before-cat-tablet.webp 1x, img/content/before-cat-tablet@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="img/content/before-cat-mobile.webp 1x, img/content/before-cat-mobile@2x.webp 2x" width="280" height="256">
-              <source media="(min-width: 768px)" srcset="img/content/before-cat-tablet.png 1x, img/content/before-cat-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--before" src="img/content/before-cat-mobile.png" srcset="img/content/before-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис с лишним весом до Cat Energy.">
-            </picture>
-            <div class="slider__control">
-              <button class="slider__thumb" type="button" aria-label="Кнопка для смены изображения до/после."></button>
+            <div class="slider__fraction slider__fraction--before">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/before-cat-tablet.webp 1x, img/content/before-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/content/before-cat-mobile.webp 1x, img/content/before-cat-mobile@2x.webp 2x" width="280" height="256">
+                <source media="(min-width: 768px)" srcset="img/content/before-cat-tablet.png 1x, img/content/before-cat-tablet@2x.png 2x" width="560" height="512">
+                <img class="slider__image" src="img/content/before-cat-mobile.png" srcset="img/content/before-cat-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис с лишним весом до Cat Energy.">
+              </picture>
             </div>
-            <picture>
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/after-cat-tablet.webp 1x, img/content/after-cat-tablet@2x.webp 2x" width="560" height="512">
-              <source type="image/webp" srcset="img/content/after-cat-mobile.webp 1x, img/content/after-cat-mobile@2x.webp 2x" width="280" height="256">
-              <source media="(min-width: 768px)" srcset="img/content/after-cat-tablet.png 1x, img/content/after-cat-tablet@2x.png 2x" width="560" height="512">
-              <img class="slider__image slider__image--after" src="img/content/after-cat-mobile.png" width="280" height="256" srcset="img/content/after-cat-mobile@2x.png 2x" alt="Кот Борис стройный после Cat Energy.">
-            </picture>
+            <div class="slider__fraction slider__fraction--after">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/content/after-cat-tablet.webp 1x, img/content/after-cat-tablet@2x.webp 2x" width="560" height="512">
+                <source type="image/webp" srcset="img/content/after-cat-mobile.webp 1x, img/content/after-cat-mobile@2x.webp 2x" width="280" height="256">
+                <source media="(min-width: 768px)" srcset="img/content/after-cat-tablet.png 1x, img/content/after-cat-tablet@2x.png 2x" width="560" height="512">
+                <img class="slider__image" src="img/content/after-cat-mobile.png" width="280" height="256" srcset="img/content/after-cat-mobile@2x.png 2x" alt="Кот Борис стройный после Cat Energy.">
+              </picture>
+            </div>
+            <label class="visually-hidden" for="range" aria-label="Слайдер для смены изображений до/после."></label>
+            <input class="slider__range" type="range" min="0" max="100" value="50" id="range">
+            <div class="slider__control"></div>
           </div>
         </div>
       </section>
@@ -177,5 +181,6 @@
       </div>
     </footer>
     <script src="js/burger-menu.min.js"></script>
+    <script src="js/slider.min.js"></script>
   </body>
 </html>
