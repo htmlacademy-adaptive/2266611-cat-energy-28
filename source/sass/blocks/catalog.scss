@@ -287,11 +287,7 @@
   font-size: 16px;
   line-height: 20px;
 
-  @include button;
-
-  @media (max-width: ($vp-768 - 1px)) {
-    grid-column: 1/-1;
-  }
+  grid-column: 1/-1;
 
   @media (min-width: $vp-768) {
     margin-top: 20px;
@@ -299,26 +295,5 @@
 
   @media (min-width: $vp-1440) {
     margin-top: 16px;
-  }
-}
-
-.catalog__link {
-  display: block;
-  padding: 10px 20px;
-
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: $color-charcoal;
-  text-transform: uppercase;
-
-  background-color: $color-white-smoke;
-
-  &:hover {
-    background-color: $color-whisper-a;
-  }
-
-  &:active {
-    color: rgba($color-charcoal, 0.3);
   }
 }

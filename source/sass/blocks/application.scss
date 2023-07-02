@@ -573,14 +573,12 @@
   }
 }
 
-.application__submit {
+.application__button {
   width: 100%;
   padding: 10px 20px;
 
   font-size: 16px;
   line-height: 20px;
-
-  @include button;
 
   &:focus-visible {
     outline: 3px dotted $color-flamingo;
