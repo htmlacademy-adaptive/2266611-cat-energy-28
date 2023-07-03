@@ -1,0 +1,31 @@
+@mixin title($size, $height) {
+  font-weight: 400;
+  font-size: $size;
+  line-height: $height;
+
+  @media (min-width: $vp-768) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@mixin button {
+  display: block;
+
+  font-family: $ff-oswald;
+  text-align: center;
+  color: $color-white;
+  text-transform: uppercase;
+
+  background-color: $color-apple;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-limeade;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+}

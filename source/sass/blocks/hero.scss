@@ -1,0 +1,133 @@
+.hero {
+  position: relative;
+
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+
+  text-align: center;
+  color: $color-white;
+
+  @media (min-width: $vp-768) {
+    padding: 64px 118px 526px 118px;
+
+    text-align: left;
+    color: $color-black;
+  }
+
+  @media (min-width: $vp-1440) {
+    padding: 111px 190px 185px 190px;
+  }
+}
+
+.hero__heading {
+  position: relative;
+
+  padding: 27px 0 29px 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20px;
+
+    width: calc(100% + 40px);
+    height: calc(100% + 135px);
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &::before {
+    z-index: -2;
+
+    background-image: url("../img/background/hero-cat-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/hero-cat-mobile@2x.jpg");
+    }
+  }
+
+  &::after {
+    z-index: -1;
+
+    background-color: rgba($color-apple, 0.85);
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.hero__title {
+  max-width: 250px;
+  margin: 0 auto 25px auto;
+
+  @include title(36px, 36px);
+
+  @media (min-width: $vp-768) {
+    max-width: 420px;
+    margin: 0 auto 41px 0;
+  }
+}
+
+.hero__slogan {
+  max-width: 250px;
+  margin: 0 auto;
+
+  line-height: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    max-width: 285px;
+    margin: 0 0 49px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $vp-1440) {
+    margin: 0 0 50px 0;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $vp-1440) {
+    bottom: 52px;
+    left: 58%;
+  }
+}
+
+.hero__button {
+  max-width: 280px;
+  margin: 3px auto 0 auto;
+  padding: 11px 20px;
+
+  @media (min-width: $vp-768) {
+    max-width: 244px;
+    margin: 0;
+    padding: 17px 26px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}

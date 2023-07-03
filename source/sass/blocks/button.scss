@@ -1,0 +1,34 @@
+.button {
+  display: block;
+
+  font-family: $ff-oswald;
+  text-align: center;
+  color: $color-white;
+  text-transform: uppercase;
+
+  background-color: $color-apple;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-limeade;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+  }
+
+  &--more {
+    color: $color-charcoal;
+
+    background-color: $color-white-smoke;
+
+    &:hover {
+      background-color: $color-whisper-a;
+    }
+
+    &:active {
+      color: rgba($color-charcoal, 0.3);
+    }
+  }
+}

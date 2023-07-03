@@ -1,1 +1,25 @@
-// Начните писать стили здесь
+// Global
+// ------------------------
+
+@import "global/variables";
+@import "global/mixin";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+
+// Blocks
+// ------------------------
+
+@import "blocks/about";
+@import "blocks/additional";
+@import "blocks/application";
+@import "blocks/button";
+@import "blocks/catalog";
+@import "blocks/example";
+@import "blocks/hero";
+@import "blocks/map";
+@import "blocks/page-footer";
+@import "blocks/page-header";
+@import "blocks/page-main";
+@import "blocks/products";
+@import "blocks/slider";

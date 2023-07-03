@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: $ff-oswald;
+}
+
+a {
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 3px dotted $color-flamingo;
+    outline-offset: 2px;
+  }
+}

@@ -1,0 +1,128 @@
+.map {
+  @media (min-width: $vp-1440) {
+    display: grid;
+
+    grid-template-columns: auto 565px 655px auto;
+    grid-template-rows: 95px 1fr 107px;
+  }
+}
+
+.map__content {
+  display: grid;
+  padding: 26px 20px;
+
+  background-color: $color-white;
+
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+
+  &--inner {
+    background-color: $color-white-smoke;
+  }
+
+  @media (min-width: $vp-768) {
+    padding: 60px 70px;
+  }
+
+  @media (min-width: $vp-1440) {
+    z-index: 10;
+
+    padding: 60px 60px 60px 80px;
+
+    column-gap: 75px;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    &--inner {
+      background-color: $color-white;
+    }
+  }
+}
+
+.map__slogan {
+  max-width: 140px;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  @media (min-width: $vp-768) {
+    max-width: 175px;
+
+    font-size: 20px;
+    line-height: 26px;
+
+    justify-self: start;
+  }
+}
+
+.map__address {
+  max-width: 140px;
+  margin: 0;
+
+  line-height: 20px;
+  font-family: $ff-lato;
+  color: $color-charcoal;
+
+  @media (min-width: $vp-768) {
+    max-width: 180px;
+
+    font-size: 16px;
+    text-align: end;
+
+    justify-self: end;
+  }
+
+  @media (min-width: $vp-1440) {
+    text-align: start;
+  }
+}
+
+.map__city {
+  display: block;
+
+  @media (min-width: $vp-768) {
+    margin-top: 15px;
+  }
+}
+
+.map__wrapper {
+  position: relative;
+
+  height: 362px;
+  overflow: hidden;
+
+  @media (min-width: $vp-768) {
+    min-height: 400px;
+  }
+
+  @media (min-width: $vp-1440) {
+    height: 100%;
+
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+  }
+}
+
+.map__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.map__interactive {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+}
